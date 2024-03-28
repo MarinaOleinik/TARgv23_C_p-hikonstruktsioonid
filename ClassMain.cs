@@ -12,12 +12,12 @@ namespace TARgv23_C_põhikonstruktsioonid
     {
         public static void Main(string[] args)
         {
-            //II.Osa Tsüklid, Järjendid, Massivid
+            //II.Osa Tsüklid, Järjendid,Sõnaslik
             ConsoleKeyInfo key = new ConsoleKeyInfo();
             do
             {
                 Console.WriteLine("Vajuta Backspace");
-                key = Console.ReadKey(0);
+                key = Console.ReadKey();
             } while (key.Key != ConsoleKey.Backspace);           
             
             int a = 0;
