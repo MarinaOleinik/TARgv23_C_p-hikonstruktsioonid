@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +12,111 @@ namespace TARgv23_C_põhikonstruktsioonid
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            //II.Osa Tsüklid, Järjendid, Massivid
+            ConsoleKeyInfo key = new ConsoleKeyInfo();
+            do
+            {
+                Console.WriteLine("Vajuta Backspace");
+                key = Console.ReadKey(0);
+            } while (key.Key != ConsoleKey.Backspace);           
+            
+            int a = 0;
+            while(a<10)
+            {
+                Console.WriteLine(a);
+                a++;
+            }
+            
+            /*Inimene naine=new Inimene();
+            naine.Nimi = "Kati";
+            naine.Vanus = 18;
+            Inimene mees = new Inimene("Mati");
+            mees.Vanus = 100;
+            List<Inimene> inimesed = new List<Inimene> ();
+            inimesed.Add(mees);
+            inimesed.Add(naine);
+            inimesed.Add(mees);
+            inimesed.Add(naine);
+            inimesed.Add(new Inimene() { Nimi = "Kadri", Vanus = 25 });
+            foreach (Inimene inimene in inimesed)
+            {
+                Console.WriteLine(inimene.Nimi +", ta on " +inimene.Vanus+" aastat vana");
+            }
+            Dictionary<int,Inimene> õpilased= new Dictionary<int,Inimene>();
+            õpilased.Add(501,mees);
+            õpilased.Add(601,naine);
+            õpilased.Add(602, new Inimene() { Nimi = "Kadri", Vanus = 25 });
+            foreach (Inimene item in õpilased.Values)
+            {
+                Console.WriteLine(item.Nimi);
+            }
+            foreach (KeyValuePair<int,Inimene> item in õpilased)
+            {
+                Console.WriteLine(item.Key + ": " + item.Value.Nimi+"("+item.Value.Vanus+")");
+            }
+            */
+
+
+
+            /*ArrayList arrayList = new ArrayList();
+            arrayList.Add("Esimene");
+            arrayList.Add("Teine");
+            arrayList.Add("Kolmas");
+            Console.WriteLine("Mida otsime?->");
+            string value=Console.ReadLine();
+            if (value != null)
+            {
+                if (arrayList.Contains(value))
+                {
+                    Console.WriteLine("Kokku: "+arrayList.Count);
+                    Console.WriteLine("Otsitav sõne on olemas.\nTa asub " + arrayList.IndexOf(value)+". kohal");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Oli vaja midagi otsida!");
+            }
+            arrayList.Insert(3, "Neljas");
+            arrayList.RemoveAt(0);
+            arrayList.Remove(value);
+            for (int i = 0; i < arrayList.Count; i++)
+            {
+                Console.WriteLine(arrayList[i]);
+            }
+            */
+
+
+
+
+
+            /*List<string> kuude_list = new List<string>();
+            try
+            {
+                foreach (string rida in File.ReadAllLines(@"..\..\..\Kuud.txt"))
+                {
+                    kuude_list.Add(rida);
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Viga failiga!");
+            }
+            foreach (string kuu in kuude_list)
+            {
+                Console.WriteLine(kuu);
+            }
+            kuude_list.Remove("Juuni");
+            kuude_list[0] = "Veeel kuuu";
+            Console.WriteLine("--------------Kustutasime juuni-----------");
+            foreach (string kuu in kuude_list)
+            {
+                Console.WriteLine(kuu);
+            }
+            */
+
+
+            //I.Osa Andmetüübid, If, Case, Alamfunktsioonid, Random
+            /*Console.WriteLine("Hello, World!");
 
             string nimi = "Python";
             Funktisioonid.Tervitus(nimi);
@@ -43,11 +149,11 @@ namespace TARgv23_C_põhikonstruktsioonid
             {
                 Console.WriteLine("Kirjuta ise!");
             }
-            /*
+            
              nimi: Juku-ga lähame kinno! 
              vanus: Kui vana Juku on. 
              pilet: Tasuta,Laste,Täis,Soodus. Viga! kui <0, >123
-            */
+            
             Console.WriteLine("Tere!\nMis on sinu nimi?");
             nimi = Console.ReadLine();
             Console.WriteLine("Tere " + nimi);
@@ -96,7 +202,7 @@ namespace TARgv23_C_põhikonstruktsioonid
                     paev = "Tundmatu päev";
                     break;
             }
-            Console.WriteLine(paev);
+            Console.WriteLine(paev);*/
         }
     }
 }
