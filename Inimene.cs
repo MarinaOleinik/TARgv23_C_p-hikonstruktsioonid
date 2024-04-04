@@ -16,5 +16,10 @@ namespace TARgv23_C_põhikonstruktsioonid
         {  
             Nimi = nimi;
         }
+        public Inimene(string nimi, int vanus=100)
+        {
+            Nimi = nimi;
+            Vanus = vanus;
+        }
     }
 }

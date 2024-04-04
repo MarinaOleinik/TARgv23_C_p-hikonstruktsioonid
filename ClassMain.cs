@@ -12,6 +12,74 @@ namespace TARgv23_C_põhikonstruktsioonid
     {
         public static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.UTF8;
+            //III. Osa Massivid,
+            string[] tähed = new string[5] { "A", "E", "U", "I", "O" };
+            int nr = 0;
+            while (nr<5) 
+            {
+                Console.WriteLine("{0}. täht on {1}", nr+1, tähed[nr]);
+                nr++;
+            }
+            //for
+            //foreach
+            //do
+            Console.ReadLine();
+            Random random = new Random();
+            int n=random.Next(5,10);
+            double d=random.NextDouble()*10;
+
+            double[,] determ=new double[n,n];
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    determ[i, j] = Math.Round(d, 2);
+                    Console.Write("{0} ",determ[i, j]);
+                }
+                Console.WriteLine();
+            }
+            Console.ReadLine();
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            int N=random.Next(-100,100); //-100,100
+            int M=random.Next(-100,100);           
+            Console.WriteLine("N={0}, M={1}", N, M);
+            if (N > M)
+            {
+                int abi;
+                abi = N;
+                N = M;
+                M = abi;
+            }
+            Console.WriteLine("N={0}, M={1}", N, M);
+
+            int[] arvud_N_M = new int[M-N+1];
+            for (int i = 0; i < arvud_N_M.Length; i++)
+            {
+                arvud_N_M[i] = N;
+                Console.Write("{0} ",Math.Pow(arvud_N_M[i],2));
+                N++;
+            }
+            Console.ReadLine() ;
+
+
+            Inimene[]mehed=new Inimene[4];
+            mehed[2] = new Inimene("Mati");
+            mehed[1] = new Inimene("Margus", 45);
+            mehed[0] = new Inimene("Paul", 65);
+            Inimene mees3 = new Inimene();
+            mees3.Nimi = "Peeter";
+            mees3.Vanus = 19;
+            mehed[3] = mees3;
+            Inimene mees4 = new Inimene();
+            foreach (Inimene mees in mehed)
+            {
+                Console.WriteLine(mees.Nimi+" "+mees.Vanus);
+            }
+            Console.ReadLine();
+
+
             //II.Osa Tsüklid, Järjendid,Sõnaslik
             ConsoleKeyInfo key = new ConsoleKeyInfo();
             do
