@@ -24,7 +24,7 @@ namespace TARgv23_C_põhikonstruktsioonid
             //for
             //foreach
             //do
-            Console.ReadLine();
+            /*Console.ReadLine();
             Random random = new Random();
             int n=random.Next(5,10);
             double d=random.NextDouble()*10;
@@ -39,8 +39,8 @@ namespace TARgv23_C_põhikonstruktsioonid
                 }
                 Console.WriteLine();
             }
-            Console.ReadLine();
-            Console.Clear();
+            Console.ReadLine();*/
+            /*Console.Clear();
             Console.ForegroundColor = ConsoleColor.Yellow;
             int N=random.Next(-100,100); //-100,100
             int M=random.Next(-100,100);           
@@ -61,9 +61,9 @@ namespace TARgv23_C_põhikonstruktsioonid
                 Console.Write("{0} ",Math.Pow(arvud_N_M[i],2));
                 N++;
             }
-            Console.ReadLine() ;
+            Console.ReadLine() ;*/
 
-
+            /*
             Inimene[]mehed=new Inimene[4];
             mehed[2] = new Inimene("Mati");
             mehed[1] = new Inimene("Margus", 45);
@@ -78,10 +78,10 @@ namespace TARgv23_C_põhikonstruktsioonid
                 Console.WriteLine(mees.Nimi+" "+mees.Vanus);
             }
             Console.ReadLine();
-
+            */
 
             //II.Osa Tsüklid, Järjendid,Sõnaslik
-            ConsoleKeyInfo key = new ConsoleKeyInfo();
+            /*ConsoleKeyInfo key = new ConsoleKeyInfo();
             do
             {
                 Console.WriteLine("Vajuta Backspace");
@@ -93,7 +93,7 @@ namespace TARgv23_C_põhikonstruktsioonid
             {
                 Console.WriteLine(a);
                 a++;
-            }
+            }*/
             
             /*Inimene naine=new Inimene();
             naine.Nimi = "Kati";
