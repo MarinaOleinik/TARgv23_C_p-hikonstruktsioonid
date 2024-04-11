@@ -23,10 +23,10 @@ namespace TARgv23_C_põhikonstruktsioonid
             tootaja.Töötasu = 1000;
             double palk =tootaja.Sissetulek(tootaja.Töötasu);
             Console.WriteLine(tootaja.Nimi + " saab kätte " + palk);
-            Senior senior = new Senior();
+            Senior senior = new Senior(19);
             senior.Nimi = "Meelis";
             //senior.Tööstaž = 50;
-            double pension =senior.Sissetulek(1000,senior.Tööstaž);
+            double pension =senior.Sissetulek(1000);
             Console.WriteLine(senior.Nimi + " saab kätte " + pension);
             
             //III. Osa Massivid,

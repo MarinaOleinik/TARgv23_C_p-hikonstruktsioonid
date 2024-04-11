@@ -13,7 +13,7 @@ namespace TARgv23_C_põhikonstruktsioonid
         public float Töötasu;
 
 
-        public override double Sissetulek(double tasu, int T=0)
+        public override double Sissetulek(double tasu)
         {
             tasu = ((tasu - 654) /100)*80 + 654;
             return tasu;

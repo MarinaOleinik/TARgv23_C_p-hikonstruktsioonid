@@ -14,9 +14,9 @@ namespace TARgv23_C_põhikonstruktsioonid
         {
             Tööstaž = tööstaz;
         }
-        public override double Sissetulek(double tasu,int tööstaž)
+        public override double Sissetulek(double tasu)
         {
-            return (double)(tasu * (1 + (double)tööstaž / 100));
+            return (double)(tasu * (1 + (double)Tööstaž / 100));
         }
     }
 }
