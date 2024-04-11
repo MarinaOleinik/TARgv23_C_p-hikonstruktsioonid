@@ -9,8 +9,16 @@ namespace TARgv23_C_põhikonstruktsioonid
     public class Inimene
     {
         public string Nimi { get; set; }
-        public int Vanus { get; set; }
-
+        public int Sünniaasta;
+        private int vanus;
+        public int Vanus
+        {
+            get 
+            {   vanus = DateTime.Now.Year - Sünniaasta;
+                return vanus; }
+            set 
+            {  vanus = value;}
+        }
         public Inimene() { }
         public Inimene(string nimi) 
         {  
@@ -20,6 +28,14 @@ namespace TARgv23_C_põhikonstruktsioonid
         {
             Nimi = nimi;
             Vanus = vanus;
+        }
+        public void ÜtleVanus()
+        {
+            Console.WriteLine("Ma olen " + Vanus + " aastat vana");
+        }
+        public virtual double Sissetulek(double tasu,int tööstaz)
+        {
+            return tasu;
         }
     }
 }

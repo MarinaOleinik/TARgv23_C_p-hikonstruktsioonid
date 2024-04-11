@@ -13,14 +13,30 @@ namespace TARgv23_C_põhikonstruktsioonid
         public static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
+            //IV. Osa 
+            Inimene inimene = new Inimene("Erik");
+            inimene.Sünniaasta = 2000;
+            inimene.ÜtleVanus();
+
+            Tootaja tootaja = new Tootaja();
+            tootaja.Nimi = "Madis";
+            tootaja.Töötasu = 1000;
+            double palk =tootaja.Sissetulek(tootaja.Töötasu);
+            Console.WriteLine(tootaja.Nimi + " saab kätte " + palk);
+            Senior senior = new Senior();
+            senior.Nimi = "Meelis";
+            //senior.Tööstaž = 50;
+            double pension =senior.Sissetulek(1000,senior.Tööstaž);
+            Console.WriteLine(senior.Nimi + " saab kätte " + pension);
+            
             //III. Osa Massivid,
-            string[] tähed = new string[5] { "A", "E", "U", "I", "O" };
+            /*string[] tähed = new string[5] { "A", "E", "U", "I", "O" };
             int nr = 0;
             while (nr<5) 
             {
                 Console.WriteLine("{0}. täht on {1}", nr+1, tähed[nr]);
                 nr++;
-            }
+            }*/
             //for
             //foreach
             //do
