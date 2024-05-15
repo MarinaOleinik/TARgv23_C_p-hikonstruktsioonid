@@ -13,8 +13,44 @@ namespace TARgv23_C_põhikonstruktsioonid
         public static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
+            string input = Console.ReadLine();
+            double d;
+            if (!Double.TryParse(input, out d))
+                Console.WriteLine("Wrong input");
+            double r = d *0.5;
+            Console.WriteLine(r);
+            //V.Osa
+            Random a= new Random();
+            int N=a.Next();
+            
+            try
+            {
+                StreamWriter text = new StreamWriter(@"..\..\..\Kuud.txt", true);
+                Console.WriteLine("Sisesta mingi tekst: ");
+                string lause=Console.ReadLine();
+                text.WriteLine(lause);
+                text.Close();
+            }
+            catch (Exception)
+            {
+
+                Console.WriteLine("Mingi viga failiga");
+            }
+            try 
+            {
+                StreamReader text = new StreamReader(@"..\..\..\Kuud.txt");
+                string laused=text.ReadToEnd();
+                text.Close();
+                Console.WriteLine(laused); 
+            }
+            catch (Exception)
+            {
+
+                Console.WriteLine("Mingi viga failiga, Ei saa fail lugeda");
+            }
+
             //IV. Osa 
-            Inimene inimene = new Inimene("Erik");
+            /*Inimene inimene = new Inimene("Erik");
             inimene.Sünniaasta = 2000;
             inimene.ÜtleVanus();
 
@@ -28,7 +64,7 @@ namespace TARgv23_C_põhikonstruktsioonid
             //senior.Tööstaž = 50;
             double pension =senior.Sissetulek(1000);
             Console.WriteLine(senior.Nimi + " saab kätte " + pension);
-            
+            */
             //III. Osa Massivid,
             /*string[] tähed = new string[5] { "A", "E", "U", "I", "O" };
             int nr = 0;
@@ -110,7 +146,7 @@ namespace TARgv23_C_põhikonstruktsioonid
                 Console.WriteLine(a);
                 a++;
             }*/
-            
+
             /*Inimene naine=new Inimene();
             naine.Nimi = "Kati";
             naine.Vanus = 18;
